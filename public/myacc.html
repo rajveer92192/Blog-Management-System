@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+       <link rel="stylesheet" type="text/css" href="acc.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+     <style>
+
+       div {
+            border: 1px ;
+            background-color:#3399ff ;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 7px;
+            padding-left: 0px;
+           }
+
+      #customers {
+                  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                  border-collapse: collapse;
+                  width: 100%;
+                 }
+      #customers td, #customers th {
+                                    border: 1px solid #ddd;
+                                    padding: 8px;
+                                   }
+      #customers tr:hover {background-color: #ddd;}
+
+      #customers th {
+                     padding-top: 15px;
+                     padding-bottom: 12px;
+                     text-align: left;
+                     background-color: #4CAF50;
+                     color: white;
+                    }
+      .right{
+             margin-left: 280px;
+             width: 80%;
+            }
+
+      .left{
+            position: absolute;
+            margin-top: 0px;
+            left: 10px;
+            }
+   </style>
+
+</head>
+
+<body>
+
+ <div>
+   <input type = "submit" id = "log" value="LOGOUT" style="width:100px;height:40px;margin-top:10px;margin-left:1400px;background-color: white;font-size:16px;">
+ </div>
+
+ <input type = "submit" id = "newpost" value="NEW POST" style="width:100px;height:40px;margin-top:30px;margin-left:400px;background-color: white;"> <br/><br/>
+
+<form action="/my" method="get">
+
+  <ul class ="left">
+    <li><a href="myacc.html">Posts</a></li>
+    <li><a href="comment.html">Comments</a></li>
+    <li><a href="setting.html">Settings</a></li>
+    <li><a href="help.html">Help</a></li>
+  </ul>
+
+<div class="right">
+  <table id="customers">
+
+  <tr>
+    <th></th>
+    <th>POST No.</th>
+    <th>POST NAME</th>
+    <th>POST TYPE</th>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<input type="button" id = "delete" value="DELETE" style="width:150px;height:45px;margin-top:30px;margin-left:500px;background-color: white;font-size:20px;">
+<input type="button" id ="update" value="UPDATE" style="width:150px;height:45px;margin-left:500px;background-color: white;font-size:20px;">
+
+
+</form>
+</body>
+
+
+<script>
+/*
+function addPost(parent, a, b, c, d) {
+	var tr = document.createElement("tr");
+	var td1 = document.createElement('td');
+	var td2 = document.createElement("td");
+	var td3 = document.createElement("td");
+	var td4 = document.createElement("td");
+	// td1.append(a);
+  td1.innerText = a;
+  td2.innerText = b;
+	td3.innerText = c;
+	td4.innerText = d;
+	tr.append(td1);
+	tr.append(td2);
+	tr.append(td3);
+	tr.append(td4);
+	parent.append(tr);
+}
+
+
+var t = document.getElementById('customers');
+var tb = t.childNodes[1];
+
+var deleteButton = document.getElementById('delete');
+deleteButton.addEventListener('click',function()
+{
+  addPost(tb, "t", 'pid','pname' ,'ptype');
+
+});
+*/
+var signout = document.getElementById('log');
+signout.addEventListener('click',function()
+{
+ window.location.replace("\login.html");
+});
+
+var n = document.getElementById('newpost');
+n.addEventListener('click',function()
+{
+ window.location.replace("\create.html");
+});
+
+
+</script>
+
+</html>

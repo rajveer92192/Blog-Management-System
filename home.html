@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="home.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/*text*/
+
+div.fixed {
+    margin-top: 100px;
+    font-size: 40px;
+    color:white;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="articles.html">Aricles</a></li>
+  <li><a href="about.html">About</a></li>
+  <li style="float:right"><a href="search.html">Search</a></li>
+  <li style="float:right" ><input type="text" id = "serach" placeholder="Search For Blog" style = "width:200px" ></li>
+</ul>
+
+<button id = "login" style="margin-top: 12px;margin-left: 1300px;font-size: 20px;font-style: normal;background-color: #3399ff;width:200px;height:52px;}">LOG IN</button>
+
+
+<div class="fixed">
+<center>Write Your Passion In Your's Way<br/>
+</center>
+</div>
+
+<p ><center style="color:white; font-size:20px;">Create the unique and interesting blog's for free.</center></p>
+
+
+
+<center><button id ="ing" style="font-size: 20px;font-style: normal;background-color: #3399ff;width:220px;height:30px;">Create Your Blog</button></center>
+
+
+</body>
+
+<script>
+
+var ing = document.getElementById('ing');
+ing.addEventListener('click',function()
+{
+ window.location.replace("\signup.html");
+});
+
+var login = document.getElementById('login');
+login.addEventListener('click',function()
+{
+ window.location.replace("\login.html");
+});
+
+</script>
+
+</html>

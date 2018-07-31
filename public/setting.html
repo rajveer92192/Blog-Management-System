@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+     <link rel="stylesheet" type="text/css" href="acc.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <style>
+
+   button{
+      width:100px;
+      height: 40px;
+      margin-top:30px ;
+      margin-left:400px ;
+      background-color: white;
+   }
+   div {
+    border: 1px ;
+    background-color:#3399ff ;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 7px;
+    padding-left: 0px;
+   }
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 15px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+
+}
+.right
+{
+    margin-left: 480px;
+      width: 50%;
+}
+
+.left
+{
+   margin-top: 0px;
+    position: absolute;
+    left: 10px;
+}
+
+   </style>
+
+</head>
+
+<body>
+
+<form action="/setting" method="get">
+   <div>
+     <input type = "submit" id = "logout" value="LOGOUT" style="width:100px;height:40px;margin-top:10px;font-size:16px; margin-left:1400px;background-color:white;"/>
+   </div>
+
+   <br/><br/><br/>
+
+  <ul class ="left">
+    <li><a href="myacc.html">Posts</a></li>
+    <li><a href="comment.html">Comments</a></li>
+    <li><a href="setting.html">Settings</a></li>
+    <li><a href="help.html">Help</a></li>
+  </ul>
+
+<div class="right">
+  <font size= "5">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Your User Id <input type = "text" name = "uid" style = "width:70px;height:25px;"><br/><br/>
+
+   <center>
+           <font size="5"><u>UPDATE YOUR DETAILS</u></font><br/><br/>
+    First Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type = "text" name = "fname" style = "width:200px;height:26px;"><br/><br/>
+    Last Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type = "text" name = "lname" style = "width:200px;height:26px;"><br/><br/>
+    User Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type = "text" name = "uname" style = "width:200px;height:26px;"><br/><br/>
+    Email Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <input type = "text" name= "id" style = "width:200px;height:26px;"><br/><br/>
+    Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "password" name = "pass" style = "width:200px;height:26px;"><br/><br/>
+    Confirm Password &nbsp;&nbsp;&nbsp;<input type = "password" name = "cpass" style = "width:200px;height:26px;"><br/><br/>
+    Verify Pin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "pin" style = "width:200px;height:26px;"><br/>
+    <font size="2">We have sent mail to your email-id to verify your account</font><br/><br/>
+    <input type = "submit" id = "save" value="SAVE" style="width:100px;font-size:18px; height:40px;margin-left:600px;background-color:white;"/>
+   </form>
+   </center>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "submit"  value="SEND PIN" style="width:100px;height:40px;margin-left:5px;background-color:white;font-size:15px;"/>
+</div>
+</body>
+
+<script>
+var save = document.getElementById('save');
+save.addEventListener('click',function()
+{
+ window.location.replace("\myacc.html");
+});
+
+var signout = document.getElementById('logout');
+signout.addEventListener('click',function()
+{
+ window.location.replace("\login.html");
+});
+</script>
+
+</html>

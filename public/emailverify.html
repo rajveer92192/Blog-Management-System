@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+
+   div{
+     font-size: 25px;
+   }
+
+   button{
+     width:100px;
+     height:35px;
+     font-size: 24px;
+     font-family: normal;
+     background-color:#3399ff;
+   }
+  </style>
+
+  </head>
+
+<body>
+
+    <ul>
+
+      <li><a class="active" href="home.html">Home</a></li>
+      <li><a href="articles.html">Aricles</a></li>
+      <li><a href="about.html">About</a></li>
+      <li style="float:right"><a href="search.html">Search</a></li>
+      <li style="float:right" ><input type="text" id = "serach" placeholder="Search For Blog" style:"width:45px;height:35px;"></li>
+    </ul>
+
+<center>
+  <u><p style="font-size: 35px;">Please verify your Email Address<p></u><br/>
+  <div>
+    Verify Pin <input type="text" id = "vpin" style = "width:200px;height:26px;">
+  </div>
+   <p style:"font-size:8px;">We have sent verify pin to your Email ID</p><br/><br/>
+   <button id = "pin" style="background-color: #3399ff;width:150px;height:40px;">VERIFY</button>
+</center>
+
+
+
+</body>
+
+<script>
+var mail = document.getElementById('pin');
+mail.addEventListener('click',function()
+{
+ window.location.replace("\profilepic.html");
+});
+</script>
+
+</html>

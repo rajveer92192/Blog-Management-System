@@ -1,0 +1,47 @@
+/* Navigation Bar*/
+ul {
+    list-style-type: none;
+    margin-top: 70px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:0px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size:18px ;
+}
+li input{
+       width:140px;
+       height:35px;
+       font-size: 17px;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #3399ff;
+}
+
+
+
+/* Body*/
+
+body{
+  background-color: #33ccff;
+}

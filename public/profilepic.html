@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <link rel="stylesheet" type="text/css" href="home.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      input{
+            margin-left:0px;
+            width:205px;
+            height:27px;
+            background-color:white;
+           }
+      img{
+          margin-left:200px;
+         }
+   </style>
+
+</head>
+
+<body>
+
+  <form action = "/pic" method="POST" enctype="multipart/form-data/text" >
+
+    <ul>
+      <li><a class="active" href="home.html">Home</a></li>
+      <li><a href="articles.html">Aricles</a></li>
+      <li><a href="about.html">About</a></li>
+      <li style="float:right"><a href="search.html">Search</a></li>
+      <li style="float:right" ><input type="text" id = "serach" placeholder="Search For Blog" style:"width:45px;height:35px;"></li>
+   </ul>
+
+</form>
+
+<br/>
+
+<center>
+
+  <u><font size="30"><b>Upload Your Proile Picture</b></font></u><br/><br/>
+
+  <br/><br/><br/><img src="" id="profile-img-tag" width="200px" />
+  <input type="file" name="file" id="profile-img"><br/><br/><br/>
+  <button id="Upload" style="background-color: #3399ff;width:180px;height:40px;font-size:18px;">UPLOAD</button>
+
+</center>
+
+</body>
+
+<script type="text/javascript">
+
+function readURL(input)
+{
+  if (input.files && input.files[0])
+  {
+     var reader = new FileReader();
+     reader.onload = function (e)
+     {
+       $('#profile-img-tag').attr('src', e.target.result);
+     }
+      reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$("#profile-img").change(function()
+   {
+        readURL(this);
+    });
+
+</script>
+
+<script>
+var my = document.getElementById('Upload');
+my.addEventListener('click',function()
+{
+ window.location.replace("\myacc.html");
+});
+
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+  div{
+     margin-top: 50px;
+     font-size: 27px;
+     font-family: normal;
+  }
+
+
+  </style>
+  </head>
+<body>
+
+  <ul>
+    <form action = "/in" method = "get">
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="articles.html">Aricles</a></li>
+    <li><a href="about.html">About</a></li>
+    <li style="float:right"><a href="search.html">Search</a></li>
+    <li style="float:right" ><input type="text" id = "serach" placeholder="Search For Blog" style:"width:45px;height:35px;"></li>
+  </ul>
+
+<center>
+  <div>
+    <u style=" font-size:55px;">SIGN UP FOR BLOG </u><br/><br/>
+  User Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" id = "uid" value="" name = "uid" style = "width:200px;height:26px;"><br/><br/>
+  First Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type = "text"  name = "fname" style = "width:200px;height:26px;"><br/><br/>
+  Last Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type = "text"  name = "lname"style = "width:200px;height:26px;"><br/><br/>
+  User Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type = "text"  name = "uname" style = "width:200px;height:26px;"><br/><br/>
+  Email Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <input type = "text"  name = "id" style = "width:200px;height:26px;"><br/><br/>
+  Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "password" name = "pass" style = "width:200px;height:26px;"><br/><br/>
+  Confirm Password &nbsp;<input type = "password" name = "cpass" style = "width:200px;height:26px;"><br/><br/>
+  <div>
+</center>
+
+<center>  <button id = "sign" style="width:250px;height:50px;font-size:20px;background-color: #3399ff;" >SIGN IN</button></center>
+
+</form>
+</body>
+
+<script>
+ var rn = Math.floor(Math.random() * 51) + 25;
+  document.getElementById("uid").value = rn;
+var sign = document.getElementById('sign');
+sign.addEventListener('click',function()
+{
+ window.location.replace("\emailverify.html");
+});
+</script>
+
+</html>
